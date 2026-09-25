@@ -123,7 +123,7 @@ if ($ForcePush) {
     $pushArguments += "--force-with-lease"
 }
 $pushArguments += "-u"
-$pushArguments += if ($token) { $httpsUrl } else { "origin" }
+$pushArguments += "origin"
 $pushArguments += $currentBranch
 
 & git @pushArguments
